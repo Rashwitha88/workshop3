@@ -1,0 +1,228 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #f0f8ff; /* Light color for links */
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #a2d8e6; /* Lighter sky blue */
+    color: #fff;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h2 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+header nav ul li a:hover {
+    color: #99c6d7; /* Lighter blue hover effect */
+}
+
+/* Home Section */
+#home {
+    height: 100vh;
+    background-image: url('https://wallup.net/wp-content/uploads/2018/10/08/969865-nature-golden-retrievers-dog-bokeh-depth-of-field-sunlight.jpg'); /* Add a dog-themed background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+#home p {
+    color: #fff;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #99c6d7; /* Lighter blue */
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #7fb0c3; /* Even lighter blue */
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #a2d8e6; /* Lighter sky blue */
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.skill {
+    background-color: #e0f7fa; /* Very light blue background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #7fb0c3; /* Lighter blue */
+}
+
+.skill p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Services Section */
+#services {
+    background-color: #f0f8ff; /* Light blue */
+    padding: 60px 0;
+}
+
+#services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #a2d8e6; /* Lighter sky blue */
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #7fb0c3; /* Lighter blue */
+}
+
+.project p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #a2d8e6; /* Lighter sky blue */
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    padding: 15px 30px;
+    background-color: #99c6d7; /* Lighter blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #7fb0c3; /* Even lighter blue */
+}
+
+/* Footer */
+footer {
+    background-color: #a2d8e6; /* Lighter sky blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}

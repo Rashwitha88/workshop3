@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     jokeBtn.addEventListener('click', function() {
         // Fetching a random joke from an API
         fetch('https://official-joke-api.appspot.com/random_joke')
-            .then(response => response.json()) // Parsing the JSON response
+            .then(response => response.json()) //gut Parsing the JSON response
             .then(data => {
                 // Displaying the joke on the webpage
                 jokeDisplay.textContent = '${data.setup}:::: ${data.punchline}';
