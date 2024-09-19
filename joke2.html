@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff4757;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(255, 107, 107, 0.4);
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Joke Generator</h1>
+    <button id="jokeBtn">Get a Joke</button>
+    <p id="jokeDisplay">Click the button to get a joke!</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const jokeBtn = document.getElementById('jokeBtn');
+            const jokeDisplay = document.getElementById('jokeDisplay');
+
+            jokeBtn.addEventListener('click', function() {
+                // Fetching a random joke from an API
+                fetch('https://v2.jokeapi.dev/joke/Any')
+                    .then(response => response.json()) // Parsing the JSON response
+                    .then(data => {
+                        // Displaying the joke on the webpage
+                        if (data.type === 'single') {
+                            jokeDisplay.textContent = data.joke;
+                        } else {
+                            jokeDisplay.textContent = `${data.setup} - ${data.delivery}`;
+                        }
+                    })
+                    .catch(error => {
+                        // Handling errors
+                        jokeDisplay.textContent = 'Oops! Something went wrong. Please try again later.';
+                        console.error('Error fetching joke:', error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
